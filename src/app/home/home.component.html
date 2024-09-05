@@ -1,0 +1,37 @@
+<main class="container">
+  <section class="hero">
+    <h1>Bienvenido a <span>Delicias de la Granja</span></h1>
+    <p>La mejor calidad en pollos frescos para tu mesa</p>
+    <a href="#products" class="cta-button">Ver Productos</a>
+  </section>
+
+  <section id="featured-products">
+    <h2>Productos Destacados</h2>
+    <div class="product-grid">
+      <div *ngFor="let product of featuredProducts" class="product-card">
+        <img [src]="product.image" [alt]="product.name" />
+        <h3>{{ product.name }}</h3>
+        <p class="price">${{ product.price.toFixed(2) }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-us">
+    <h2>Sobre Nosotros</h2>
+    <p>
+      En Delicias de la Granja ®, nos dedicamos a ofrecer la mejor calidad en
+      pollos frescos desde 1990. Nuestro compromiso es brindar productos
+      saludables y deliciosos para tu familia.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contáctanos</h2>
+    <form>
+      <input type="text" placeholder="Nombre" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</main>
